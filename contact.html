@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact | Halden Villas</title>
+  <meta name="description" content="Phone, WhatsApp, email and office address of Halden Villas in Miami.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header__in">
+      <a class="logo" href="index.html">Halden <span>Villas</span></a>
+      <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="villas.html">Villas</a><a href="about.html">About us</a><a href="contact.html" aria-current="page">Contact</a></nav>
+      <a class="header__phone" href="tel:+13055550148">+1 (305) 555-0148</a>
+    </div>
+  </header>
+  <main>
+  <section class="intro">
+    <div class="wrap">
+      <h1>Contact us</h1>
+      <p class="lead">Call, write or visit our office in Brickell. We answer every message the same day.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:56px">
+    <div class="wrap contact">
+      <div class="channels">
+        <a class="channel" href="tel:+13055550148"><h3>Phone</h3><p>+1 (305) 555-0148</p></a>
+        <a class="channel" href="https://wa.me/13055550148"><h3>WhatsApp</h3><p>+1 (305) 555-0148</p></a>
+        <a class="channel" href="mailto:hello@haldenvillas.example"><h3>Email</h3><p>hello@haldenvillas.example</p></a>
+        <div class="channel"><h3>Office</h3><p>1450 Brickell Avenue, Suite 2100<br>Miami, FL 33131</p></div>
+        <div class="channel"><h3>Opening hours</h3><p>Monday to Saturday, 9:00 to 19:00<br>Private viewings by appointment, also on Sundays.</p></div>
+      </div>
+
+      <div class="panel">
+        <h2>Send us a message</h2>
+        <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from the website">
+          <div class="form__row">
+            <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <div class="form__row">
+            <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+            <label>Budget
+              <select name="budget">
+                <option>€1M – €2M</option><option>€2M – €3M</option><option>€3M – €5M</option><option>Above €5M</option>
+              </select>
+            </label>
+          </div>
+          <label>Villa you're interested in
+            <select name="villa"><option>Not sure yet</option><option>Casa Marea – €3.950.000</option><option>Villa Alba – €2.450.000</option><option>The Glass House – €4.800.000</option><option>Palm Court – €1.850.000</option><option>Villa Noir – €3.600.000</option><option>Villa Serena – €2.150.000</option><option>Ocean House – €4.650.000</option><option>Casa Lumen – €1.650.000</option><option>Venetian Villa – €4.200.000</option><option>Villa Coralina – €2.750.000</option><option>Bayview House – €1.250.000</option><option>Sunset Villa – €3.250.000</option></select>
+          </label>
+          <label>Message<textarea name="message" required placeholder="Tell us what you're looking for: area, size, when you'd like to buy."></textarea></label>
+          <label class="check"><input type="checkbox" name="consent" required>I agree that Halden Villas may contact me about my inquiry.</label>
+          <button class="btn btn--dark btn--block" type="submit">Send message</button>
+          <p class="form__note">We reply within one working day. Your details are never shared.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="logo" href="index.html">Halden <span>Villas</span></a>
+          <p>Villas in Miami from €1 million. Selected, checked and sold with care since 2010.</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+13055550148">+1 (305) 555-0148</a></li>
+            <li><a href="https://wa.me/13055550148">WhatsApp</a></li>
+            <li><a href="mailto:hello@haldenvillas.example">hello@haldenvillas.example</a></li>
+            <li>1450 Brickell Avenue, Suite 2100<br>Miami, FL 33131</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul><li><a href="index.html">Home</a></li><li><a href="villas.html">Villas</a></li><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Halden Villas. All rights reserved.</span>
+        <span>Demo website. Villas, prices and reviews are examples.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

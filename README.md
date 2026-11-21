@@ -1,27 +1,21 @@
-# Azure & Palm — Miami Luxury Real Estate
+# Halden Villas — Miami (site model)
 
-Site de prezentare premium pentru o agenție imobiliară de lux din Miami. Static (HTML + CSS + JS vanilla), fără build și fără dependențe.
+Site de prezentare pentru o agenție care vinde vile în Miami, de la 1.000.000 €. Doar HTML și CSS, fără JavaScript și fără build. Conținutul site-ului e în engleză.
 
-## Funcționalități
-- **Hero** pe tot ecranul, cu fotografie și căutare rapidă (cartier, tip, buget)
-- **12 proprietăți** cu fotografii, prețuri, dormitoare/băi/suprafață, insigne „Nou” și „Waterfront”
-- **Filtre**: text liber, cartier, tip, preț min/max, dormitoare, băi, pe malul apei, noi pe piață, favorite (salvate în browser), sortare
-- **Fereastră de detalii** cu galerie (săgeți, miniaturi, tastatură, swipe pe mobil) și buton „Programează o vizionare” care completează automat formularul
-- **Cartiere** (Miami Beach, Brickell, Coral Gables, Key Biscayne, Fisher Island, Coconut Grove): un click filtrează proprietățile
-- Secțiunile **Despre noi**, **Echipă** și **Testimoniale**
-- **Formular de contact** cu validare, protecție anti-spam (honeypot) și mesaje de confirmare
-- **Bilingv RO / EN**, design responsive, animații discrete (respectă `prefers-reduced-motion`)
+## Pagini
+| Fișier | Ce conține |
+|---|---|
+| `index.html` | Prima pagină: vilele recomandate, despre noi, recenzii, contact |
+| `villas.html`, `villas-2.html` | Toate cele 12 vile, câte 6 pe pagină |
+| `villas/<nume>.html` | O pagină pentru fiecare vilă: galerie, detalii, formular de vizionare |
+| `about.html` | Povestea firmei, echipa, toate recenziile |
+| `contact.html` | Telefon, WhatsApp, email, adresă, program, formular |
+| `css/style.css` | Tot designul (charcoal și tonuri calde) |
 
-## Rulare
-Deschide `index.html` în browser sau pornește un server local:
-```bash
-python3 -m http.server 8000   # apoi http://localhost:8000
-```
+## De făcut înainte de lansare
+1. **Formularul**: creează un formular gratuit pe [formspree.io](https://formspree.io) și înlocuiește `https://formspree.io/f/your-form-id` cu adresa ta în toate fișierele HTML (căutare și înlocuire în editor).
+2. **Datele de contact**: înlocuiește telefonul `+1 (305) 555-0148`, numărul de WhatsApp `13055550148`, emailul `hello@haldenvillas.example` și adresa.
+3. **Vilele și pozele**: textele, prețurile și pozele (de pe Unsplash) sunt exemple. Înlocuiește-le în paginile din `villas/` și pe cardurile din `index.html` și `villas*.html`.
 
-## Personalizare
-- **Proprietăți**: `js/data.js` (`PROPERTIES`, `NEIGHBORHOODS`). Fotografiile vin de pe Unsplash prin ID.
-- **Texte / traduceri**: `js/i18n.js`
-- **Culori și fonturi**: variabilele CSS din `:root`, în `css/styles.css`
-- **Primirea mesajelor din formular**: setează `FORM_ENDPOINT` în `js/main.js` (de ex. un URL Formspree). Dacă rămâne gol, formularul doar simulează trimiterea.
-
-> Proprietățile, prețurile, agenții și datele de contact sunt fictive și au rol demonstrativ.
+## Publicare
+GitHub Pages: în repository, la Settings → Pages, alege ramura și folderul rădăcină. Sau trage folderul proiectului pe app.netlify.com/drop.

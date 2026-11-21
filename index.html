@@ -1,365 +1,159 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Azure &amp; Palm — Miami Luxury Real Estate</title>
-  <meta name="description" content="Vile, penthouse-uri și domenii private pe malul apei în Miami Beach, Brickell, Coral Gables, Key Biscayne și Fisher Island." />
-  <meta name="theme-color" content="#0c1420" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://images.unsplash.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script>
-    /* Elegant gradient shown if a photo fails to load. */
-    const FALLBACK_IMG =
-      "data:image/svg+xml," +
-      encodeURIComponent(
-        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='none'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#1d3247'/><stop offset='.55' stop-color='#2f5d6e'/><stop offset='1' stop-color='#c9a96e'/></linearGradient></defs><rect width='400' height='300' fill='url(#g)'/></svg>"
-      );
-  </script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230c1420'/><text x='16' y='22' font-family='Georgia' font-size='16' fill='%23c9a96e' text-anchor='middle'>A&amp;P</text></svg>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Halden Villas Miami</title>
+  <meta name="description" content="Villas for sale in Miami from €1 million. Selected, checked and sold with care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip" href="#listings">Skip to content</a>
-
-  <!-- ============ HEADER ============ -->
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="#top" class="brand" aria-label="Azure & Palm">
-        <span class="brand__mark">A<i>&amp;</i>P</span>
-        <span class="brand__name">Azure &amp; Palm<small>Miami Realty</small></span>
-      </a>
-      <nav class="nav__links" id="navLinks" aria-label="Main">
-        <a href="#listings" data-i18n="nav.listings">Proprietăți</a>
-        <a href="#areas" data-i18n="nav.areas">Cartiere</a>
-        <a href="#about" data-i18n="nav.about">Despre noi</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-      <div class="nav__right">
-        <div class="lang" role="group" aria-label="Language">
-          <button type="button" data-lang="ro" aria-pressed="true">RO</button>
-          <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        </div>
-        <a href="#contact" class="btn btn--gold btn--sm nav__cta" data-i18n="nav.cta">Programează o vizionare</a>
-        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
-      </div>
+  <header class="header">
+    <div class="wrap header__in">
+      <a class="logo" href="index.html">Halden <span>Villas</span></a>
+      <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="villas.html">Villas</a><a href="about.html">About us</a><a href="contact.html">Contact</a></nav>
+      <a class="header__phone" href="tel:+13055550148">+1 (305) 555-0148</a>
     </div>
   </header>
-
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="top">
-    <div class="hero__bg" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2400&q=80" alt="" fetchpriority="high" onerror="this.onerror=null;this.src=FALLBACK_IMG" />
-    </div>
-    <div class="container hero__content">
-      <p class="eyebrow eyebrow--light reveal" data-i18n="hero.eyebrow">Miami · Proprietăți de excepție</p>
-      <h1 class="hero__title reveal" data-i18n-html="hero.title">Acolo unde oceanul<br/>întâlnește <em>luxul</em>.</h1>
-      <p class="hero__sub reveal" data-i18n="hero.sub"></p>
-
-      <form class="quick reveal" id="quickSearch" role="search">
-        <label class="quick__field">
-          <span data-i18n="hero.where">Locație</span>
-          <select name="hood" id="qHood"><option value="" data-i18n="hero.anyArea">Orice cartier</option></select>
-        </label>
-        <label class="quick__field">
-          <span data-i18n="hero.type">Tip</span>
-          <select name="type" id="qType">
-            <option value="" data-i18n="hero.anyType">Orice tip</option>
-            <option value="villa" data-i18n="type.villa">Vilă</option>
-            <option value="penthouse" data-i18n="type.penthouse">Penthouse</option>
-            <option value="condo" data-i18n="type.condo">Apartament</option>
-            <option value="estate" data-i18n="type.estate">Domeniu</option>
-          </select>
-        </label>
-        <label class="quick__field">
-          <span data-i18n="hero.budget">Buget</span>
-          <select name="budget" id="qBudget">
-            <option value="" data-i18n="hero.anyBudget">Orice buget</option>
-            <option value="0-5000000">&lt; $5M</option>
-            <option value="5000000-10000000">$5M – $10M</option>
-            <option value="10000000-20000000">$10M – $20M</option>
-            <option value="20000000-">$20M+</option>
-          </select>
-        </label>
-        <button class="btn btn--gold quick__btn" type="submit">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <span data-i18n="hero.search">Caută</span>
-        </button>
-      </form>
-    </div>
-    <a href="#listings" class="hero__scroll" aria-label="Scroll"><span></span></a>
-  </section>
-
-  <!-- ============ STATS ============ -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stat"><strong data-count="2.4" data-prefix="$" data-suffix="B">$0</strong><span data-i18n="stats.sold"></span></div>
-      <div class="stat"><strong data-count="180" data-suffix="+">0</strong><span data-i18n="stats.listings"></span></div>
-      <div class="stat"><strong data-count="22">0</strong><span data-i18n="stats.years"></span></div>
-      <div class="stat"><strong data-count="40" data-suffix="+">0</strong><span data-i18n="stats.clients"></span></div>
+  <main>
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2200&q=80" alt="Modern villa with pool in Miami at dusk">
+    <div class="wrap hero__in">
+      <h1>Beautiful villas in Miami, at a fair price.</h1>
+      <p>We sell only villas, from €1 million. Each one visited, checked and chosen by our team before we show it to you.</p>
+      <div class="actions">
+        <a class="btn btn--light" href="villas.html">See our villas</a>
+        <a class="btn btn--line" href="contact.html">Talk to us</a>
+      </div>
     </div>
   </section>
 
-  <!-- ============ LISTINGS ============ -->
-  <section class="section" id="listings">
-    <div class="container">
-      <div class="section__head">
+  <section class="facts">
+    <div class="wrap facts__grid">
+      <div class="fact"><strong>140+</strong><span>villas sold in Miami</span></div>
+      <div class="fact"><strong>€1M – €5M</strong><span>honest prices, no surprises</span></div>
+      <div class="fact"><strong>16 years</strong><span>on the ground in Miami</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head">
         <div>
-          <p class="eyebrow" data-i18n="listings.eyebrow">Colecția</p>
-          <h2 class="section__title" data-i18n="listings.title">Proprietăți selectate</h2>
+          <h2>Villas we recommend now</h2>
+          <p class="lead">Three of our favourite villas this month. Each one has been visited by us in person.</p>
         </div>
-        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+        <a class="link" href="villas.html">All 12 villas →</a>
       </div>
-
-      <form class="filters" id="filters" onsubmit="return false">
-        <div class="filters__row">
-          <label class="filters__search">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <input type="search" id="fKeyword" data-i18n-ph="filter.keyword" aria-label="Search" />
-          </label>
-          <select id="fHood" aria-label="Neighborhood"><option value="" data-i18n="hero.anyArea">Orice cartier</option></select>
-          <select id="fType" aria-label="Type">
-            <option value="" data-i18n="hero.anyType">Orice tip</option>
-            <option value="villa" data-i18n="type.villa">Vilă</option>
-            <option value="penthouse" data-i18n="type.penthouse">Penthouse</option>
-            <option value="condo" data-i18n="type.condo">Apartament</option>
-            <option value="estate" data-i18n="type.estate">Domeniu</option>
-          </select>
-          <select id="fSort" aria-label="Sort">
-            <option value="featured" data-i18n="sort.featured">Recomandate</option>
-            <option value="priceAsc" data-i18n="sort.priceAsc">Preț crescător</option>
-            <option value="priceDesc" data-i18n="sort.priceDesc">Preț descrescător</option>
-            <option value="sizeDesc" data-i18n="sort.sizeDesc">Suprafață</option>
-          </select>
-          <button type="button" class="btn btn--ghost filters__toggle" id="moreFilters" aria-expanded="false" aria-controls="filtersMore">
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span data-i18n="filter.more">Filtre</span>
-          </button>
-        </div>
-
-        <div class="filters__more" id="filtersMore">
-          <label class="field">
-            <span data-i18n="filter.minPrice">Preț minim</span>
-            <select id="fMin">
-              <option value="0" data-i18n="filter.any">Oricâte</option>
-              <option value="2000000">$2M</option><option value="5000000">$5M</option>
-              <option value="10000000">$10M</option><option value="20000000">$20M</option>
-            </select>
-          </label>
-          <label class="field">
-            <span data-i18n="filter.maxPrice">Preț maxim</span>
-            <select id="fMax">
-              <option value="0" data-i18n="filter.any">Oricâte</option>
-              <option value="5000000">$5M</option><option value="10000000">$10M</option>
-              <option value="20000000">$20M</option><option value="35000000">$35M</option>
-            </select>
-          </label>
-          <div class="field">
-            <span data-i18n="filter.beds">Dormitoare</span>
-            <div class="pills" id="fBeds" role="radiogroup">
-              <button type="button" data-v="0" class="is-on" data-i18n="filter.any">Oricâte</button>
-              <button type="button" data-v="2">2+</button><button type="button" data-v="3">3+</button>
-              <button type="button" data-v="5">5+</button><button type="button" data-v="7">7+</button>
-            </div>
+      <div class="grid">
+        <a class="card" href="villas/casa-marea.html">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80" alt="Casa Marea, Miami Beach" loading="lazy"></div>
+          <div class="card__body">
+            <div class="card__top"><h3>Casa Marea</h3><span class="card__price">€3.950.000</span></div>
+            <p class="card__place">Miami Beach, Miami</p>
+            <p class="card__specs">5 bedrooms · 6 bathrooms · 540 m²</p>
           </div>
-          <div class="field">
-            <span data-i18n="filter.baths">Băi</span>
-            <div class="pills" id="fBaths" role="radiogroup">
-              <button type="button" data-v="0" class="is-on" data-i18n="filter.any">Oricâte</button>
-              <button type="button" data-v="3">3+</button><button type="button" data-v="5">5+</button>
-              <button type="button" data-v="8">8+</button>
-            </div>
+        </a><a class="card" href="villas/the-glass-house.html">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=900&q=80" alt="The Glass House, Key Biscayne" loading="lazy"></div>
+          <div class="card__body">
+            <div class="card__top"><h3>The Glass House</h3><span class="card__price">€4.800.000</span></div>
+            <p class="card__place">Key Biscayne, Miami</p>
+            <p class="card__specs">5 bedrooms · 6 bathrooms · 520 m²</p>
           </div>
-          <div class="field field--checks">
-            <label class="check"><input type="checkbox" id="fWater" /><span data-i18n="filter.waterfront">Pe malul apei</span></label>
-            <label class="check"><input type="checkbox" id="fNew" /><span data-i18n="filter.new">Noi pe piață</span></label>
-            <label class="check"><input type="checkbox" id="fFav" /><span data-i18n="filter.favs">Favorite</span></label>
+        </a><a class="card" href="villas/palm-court.html">
+          <div class="card__img"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="Palm Court, Coconut Grove" loading="lazy"></div>
+          <div class="card__body">
+            <div class="card__top"><h3>Palm Court</h3><span class="card__price">€1.850.000</span></div>
+            <p class="card__place">Coconut Grove, Miami</p>
+            <p class="card__specs">4 bedrooms · 4 bathrooms · 340 m²</p>
           </div>
-          <button type="button" class="link-btn" id="fReset" data-i18n="filter.reset">Resetează</button>
-        </div>
-      </form>
-
-      <div class="grid" id="grid"></div>
-      <p class="empty" id="empty" hidden data-i18n="results.empty"></p>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ============ NEIGHBORHOODS ============ -->
-  <section class="section section--dark" id="areas">
-    <div class="container">
-      <div class="section__head">
+  <section class="section section--white">
+    <div class="wrap split">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Living room of a Miami villa" loading="lazy">
+      <div class="stack">
+        <h2>A small team that knows every villa it sells.</h2>
+        <p>Halden Villas was founded in Miami in 2010 by people who moved here from Europe themselves. We know what it is like to buy far from home, so we keep things simple: real photos, clear prices and one person who looks after you from the first call to the keys.</p>
+        <p>We don't list hundreds of properties. We choose a few good villas, check them carefully and tell you honestly what we think.</p>
+        <div><a class="btn btn--dark" href="about.html">More about us</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="head"><h2>Why clients choose us</h2></div>
+      <div class="points">
+        <div><h3>Fair prices</h3><p>We know what villas really sell for in each neighbourhood, and we negotiate hard for you.</p></div>
+        <div><h3>Every villa checked</h3><p>Inspection, flood zone, insurance and title are checked before a villa reaches our website.</p></div>
+        <div><h3>Buy from anywhere</h3><p>Video tours, remote signing and help with banks, lawyers and relocation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head">
         <div>
-          <p class="eyebrow eyebrow--light" data-i18n="areas.eyebrow">Destinații</p>
-          <h2 class="section__title" data-i18n="areas.title">Cartierele Miami</h2>
+          <h2>What our clients say</h2>
+          <p class="lead">Rated 4.9 out of 5 by more than 120 clients.</p>
+        </div>
+        <a class="link" href="about.html#reviews">All reviews →</a>
+      </div>
+      <div class="reviews"><figure class="review"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote>We bought Casa Marea without flying to Miami twice. The video tours, the paperwork, the inspection: everything was handled and explained clearly.</blockquote><figcaption><strong>Andrei &amp; Ioana P.</strong>Bought in Miami Beach</figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote>Honest advice from the first call. They told us which villas were overpriced and found us a better one in Coral Gables for less.</blockquote><figcaption><strong>Martin K.</strong>Bought in Coral Gables</figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5">★★★★★</div><blockquote>Very discreet and very fast. We had a shortlist of four villas in three days and the keys a month later.</blockquote><figcaption><strong>Sofia R.</strong>Bought in Key Biscayne</figcaption></figure></div>
+    </div>
+  </section>
+
+<section class="section">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Tell us what you're looking for.</h2>
+          <p>A short call is usually enough for us to send you three or four villas that really fit. We reply the same day.</p>
+        </div>
+        <div class="band__links">
+          <a href="tel:+13055550148">+1 (305) 555-0148 <span>Call</span></a>
+          <a href="https://wa.me/13055550148">WhatsApp <span>Message</span></a>
+          <a href="mailto:hello@haldenvillas.example">hello@haldenvillas.example <span>Email</span></a>
+          <a href="contact.html">Send an inquiry <span>→</span></a>
         </div>
       </div>
-      <div class="areas" id="areasGrid"></div>
     </div>
   </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="container about">
-      <div class="about__media reveal">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Interior of a luxury Miami residence" loading="lazy" onerror="this.onerror=null;this.src=FALLBACK_IMG" />
-        <div class="about__badge"><strong>22</strong><span data-i18n="stats.years">ani de experiență</span></div>
-      </div>
-      <div class="about__text reveal">
-        <p class="eyebrow" data-i18n="about.eyebrow"></p>
-        <h2 class="section__title" data-i18n="about.title"></h2>
-        <p data-i18n="about.p1"></p>
-        <p data-i18n="about.p2"></p>
-        <ul class="benefits">
-          <li><strong data-i18n="about.b1t"></strong><span data-i18n="about.b1"></span></li>
-          <li><strong data-i18n="about.b2t"></strong><span data-i18n="about.b2"></span></li>
-          <li><strong data-i18n="about.b3t"></strong><span data-i18n="about.b3"></span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container team">
-      <h3 class="team__title" data-i18n="team.title">Consilierii noștri</h3>
-      <div class="team__grid">
-        <article class="agent reveal"><div class="agent__avatar">IV</div><h4>Isabella Vance</h4><p data-i18n="team.r1"></p><a href="tel:+13055550100">+1 (305) 555-0100</a></article>
-        <article class="agent reveal"><div class="agent__avatar">MR</div><h4>Marco Ruiz</h4><p data-i18n="team.r2"></p><a href="tel:+13055550101">+1 (305) 555-0101</a></article>
-        <article class="agent reveal"><div class="agent__avatar">AP</div><h4>Andreea Popescu</h4><p data-i18n="team.r3"></p><a href="tel:+13055550102">+1 (305) 555-0102</a></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="section section--sand">
-    <div class="container">
-      <h2 class="section__title center" data-i18n="test.title">Ce spun clienții</h2>
-      <div class="quotes">
-        <figure class="quote reveal"><blockquote data-i18n="test.q1"></blockquote><figcaption>— J. &amp; L. Harrington, Key Biscayne</figcaption></figure>
-        <figure class="quote reveal"><blockquote data-i18n="test.q2"></blockquote><figcaption>— Alejandro M., Brickell</figcaption></figure>
-        <figure class="quote reveal"><blockquote data-i18n="test.q3"></blockquote><figcaption>— Familia Ionescu, Miami Beach</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
-    <div class="contact__bg" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=70" alt="" loading="lazy" onerror="this.onerror=null;this.src=FALLBACK_IMG" />
-    </div>
-    <div class="container contact__inner">
-      <div class="contact__info">
-        <p class="eyebrow eyebrow--light" data-i18n="contact.eyebrow">Contact</p>
-        <h2 class="section__title" data-i18n="contact.title"></h2>
-        <p class="contact__sub" data-i18n="contact.sub"></p>
-        <dl class="contact__list">
-          <div><dt data-i18n="contact.office">Birou</dt><dd>1111 Lincoln Rd, Suite 800<br/>Miami Beach, FL 33139</dd></div>
-          <div><dt data-i18n="contact.phone">Telefon</dt><dd><a href="tel:+13055550100">+1 (305) 555-0100</a></dd></div>
-          <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:concierge@azureandpalm.example">concierge@azureandpalm.example</a></dd></div>
-          <div><dt data-i18n="contact.hours">Program</dt><dd data-i18n="contact.hoursVal"></dd></div>
-        </dl>
-      </div>
-
-      <form class="cform" id="contactForm" novalidate>
-        <div class="cform__grid">
-          <label class="cfield">
-            <span data-i18n="form.name">Nume complet</span>
-            <input type="text" name="name" id="cName" autocomplete="name" required />
-            <small class="err" data-err="name"></small>
-          </label>
-          <label class="cfield">
-            <span data-i18n="form.email">Email</span>
-            <input type="email" name="email" id="cEmail" autocomplete="email" required />
-            <small class="err" data-err="email"></small>
-          </label>
-          <label class="cfield">
-            <span data-i18n="form.phone">Telefon</span>
-            <input type="tel" name="phone" id="cPhone" autocomplete="tel" placeholder="+1 305 …" />
-            <small class="err" data-err="phone"></small>
-          </label>
-          <label class="cfield">
-            <span data-i18n="form.interest">Interes</span>
-            <select name="interest" id="cInterest">
-              <option value="buy" data-i18n="form.buy">Cumpărare</option>
-              <option value="sell" data-i18n="form.sell">Vânzare</option>
-              <option value="rent" data-i18n="form.rent">Închiriere de lux</option>
-              <option value="invest" data-i18n="form.invest">Investiție</option>
-            </select>
-          </label>
-          <label class="cfield">
-            <span data-i18n="form.property">Proprietate de interes</span>
-            <select name="property" id="cProperty"><option value="" data-i18n="form.none"></option></select>
-          </label>
-          <label class="cfield">
-            <span data-i18n="form.budget">Buget estimat</span>
-            <select name="budget" id="cBudget">
-              <option value="">—</option>
-              <option>$2M – $5M</option><option>$5M – $10M</option>
-              <option>$10M – $20M</option><option>$20M+</option>
-            </select>
-          </label>
-          <label class="cfield cfield--full">
-            <span data-i18n="form.message">Mesaj</span>
-            <textarea name="message" id="cMessage" rows="4" data-i18n-ph="form.messagePh" required></textarea>
-            <small class="err" data-err="message"></small>
-          </label>
-          <label class="check cfield--full">
-            <input type="checkbox" name="consent" id="cConsent" required />
-            <span data-i18n="form.consent"></span>
-          </label>
-          <small class="err cfield--full" data-err="consent"></small>
-          <!-- honeypot -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
-        </div>
-        <button class="btn btn--gold btn--block" type="submit" id="cSubmit" data-i18n="form.submit">Trimite solicitarea</button>
-        <p class="cform__status" id="cStatus" role="status" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- ============ FOOTER ============ -->
+  </main>
   <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <a href="#top" class="brand brand--footer"><span class="brand__mark">A<i>&amp;</i>P</span><span class="brand__name">Azure &amp; Palm<small>Miami Realty</small></span></a>
-        <p data-i18n="footer.tag"></p>
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a class="logo" href="index.html">Halden <span>Villas</span></a>
+          <p>Villas in Miami from €1 million. Selected, checked and sold with care since 2010.</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+13055550148">+1 (305) 555-0148</a></li>
+            <li><a href="https://wa.me/13055550148">WhatsApp</a></li>
+            <li><a href="mailto:hello@haldenvillas.example">hello@haldenvillas.example</a></li>
+            <li>1450 Brickell Avenue, Suite 2100<br>Miami, FL 33131</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul><li><a href="index.html">Home</a></li><li><a href="villas.html">Villas</a></li><li><a href="about.html">About us</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
       </div>
-      <nav class="footer__links" aria-label="Footer">
-        <a href="#listings" data-i18n="nav.listings"></a>
-        <a href="#areas" data-i18n="nav.areas"></a>
-        <a href="#about" data-i18n="nav.about"></a>
-        <a href="#contact" data-i18n="nav.contact"></a>
-      </nav>
-      <div class="footer__legal">
-        <p>© <span id="year"></span> Azure &amp; Palm Realty. <span data-i18n="footer.rights"></span></p>
-        <p class="muted" data-i18n="footer.note"></p>
+      <div class="footer__bottom">
+        <span>© 2026 Halden Villas. All rights reserved.</span>
+        <span>Demo website. Villas, prices and reviews are examples.</span>
       </div>
     </div>
   </footer>
-
-  <!-- ============ PROPERTY MODAL ============ -->
-  <dialog class="modal" id="modal" aria-labelledby="mTitle">
-    <button class="modal__close" id="mClose" aria-label="Close">&times;</button>
-    <div class="modal__gallery">
-      <img id="mImg" alt="" />
-      <button class="gal-btn gal-btn--prev" id="mPrev" aria-label="Previous">&#8249;</button>
-      <button class="gal-btn gal-btn--next" id="mNext" aria-label="Next">&#8250;</button>
-      <div class="modal__thumbs" id="mThumbs"></div>
-    </div>
-    <div class="modal__body">
-      <p class="eyebrow" id="mHood"></p>
-      <h3 id="mTitle"></h3>
-      <p class="modal__addr" id="mAddr"></p>
-      <div class="modal__price"><span data-i18n="modal.price">Preț</span><strong id="mPrice"></strong></div>
-      <ul class="specs" id="mSpecs"></ul>
-      <p id="mDesc"></p>
-      <h4 data-i18n="modal.features">Facilități</h4>
-      <ul class="feats" id="mFeats"></ul>
-      <a href="#contact" class="btn btn--gold btn--block" id="mCta" data-i18n="modal.schedule">Programează o vizionare</a>
-    </div>
-  </dialog>
-
-  <script src="js/data.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
